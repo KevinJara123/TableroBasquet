@@ -1,0 +1,86 @@
+body {
+        margin: 0;
+        background: #000;
+        color: white;
+        font-family: 'Arial Black', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        user-select: none;
+    }
+
+    .scoreboard {
+        text-align: center;
+        padding: 40px 80px;
+        border-radius: 20px;
+        background: #111;
+        border: 3px solid #ffffff33;
+        box-shadow: 0 0 40px #ffffff22;
+    }
+
+    .teams {
+        display: flex;
+        justify-content: space-between;
+        width: 900px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .teams-local h6,
+    .teams-visitante h6 {
+        margin: 0;
+        font-size: 35px;
+        letter-spacing: 3px;
+        color: #ccc;
+        text-shadow: 0 0 10px #fff;
+    }
+
+    .teams-local #localScore,
+    .teams-visitante #visitScore {
+        font-size: 140px;
+        font-weight: bold;
+    }
+
+    #localScore {
+        color: #ff2d2d;
+        text-shadow: 0 0 25px #ff0000;
+    }
+
+    #visitScore {
+        color: #1fa3ff;
+        text-shadow: 0 0 25px #0099ff;
+    }
+
+    .timer {
+        font-size: 170px;
+        font-weight: bold;
+        margin: 10px 0;
+        text-shadow: 0 0 30px yellow;
+        color: yellow;
+    }
+
+    .period {
+        margin-top: 10px;
+        font-size: 55px;
+        letter-spacing: 4px;
+        text-shadow: 0 0 10px #fff;
+    }
+
+    .fouls {
+        display: flex;
+        justify-content: space-between;
+        width: 900px;
+        margin-top: 40px;
+        font-size: 45px;
+        font-weight: bold;
+    }
+
+    .fouls div {
+        padding: 15px 35px;
+        background: #222;
+        border-radius: 15px;
+        box-shadow: inset 0 0 15px #000, 0 0 15px #ffffff33;
+    }
+
+    .hidden-controls { display: none; }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/tablero.css">
+    <title>Document</title>
+</head>
+<body>
+   <div class="scoreboard">
+
+    <div class="teams">
+        <div class="teams-local">
+            <h6>LOCAL</h6>
+            <div id="localScore">0</div>
+        </div>
+        
+        <div class="teams-visitante">
+            <h6>VISITANTE</h6>
+        <div id="visitScore">0</div>
+        </div>
+    </div>
+
+    <div class="timer" id="timer">10:00</div>
+
+    <div class="period">PERIODO: <span id="period">1</span></div>
+
+    <div class="fouls">
+        <div>FALTAS L: <span id="localFouls">0</span></div>
+        <div>FALTAS V: <span id="visitFouls">0</span></div>
+    </div>
+</div>
+
+<!-- Controles invisibles -->
+<div class="hidden-controls">
+    <button id="startBtn"></button>
+    <button id="pauseBtn"></button>
+    <button id="resetClockBtn"></button>
+</div>
+
+
+<script src="JS/tablero.js"></script>
+</body>
+</html>
