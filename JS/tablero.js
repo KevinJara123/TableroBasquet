@@ -101,5 +101,5 @@ document.addEventListener("keydown", (e) => {
 
     updateDisplay();
 });
-
+<audio id="buzzer" src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQgAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"></audio>
 updateDisplay();
