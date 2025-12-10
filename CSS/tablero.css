@@ -1,86 +1,155 @@
+/* Reset / body */
+* { box-sizing: border-box; }
 body {
-        margin: 0;
-        background: #000;
-        color: white;
-        font-family: 'Arial Black', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        user-select: none;
-    }
+    margin: 0;
+    background: #000;
+    font-family: "Orbitron", Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
 
-    .scoreboard {
-        text-align: center;
-        padding: 40px 80px;
-        border-radius: 20px;
-        background: #111;
-        border: 3px solid #ffffff33;
-        box-shadow: 0 0 40px #ffffff22;
-    }
+/* Wrapper rectangular para TV */
+.wrapper {
+    width: 92vw;
+    max-width: 1500px;
+    background: linear-gradient(180deg,#0b0b0b,#0f0f0f);
+    border: 3px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 20px 30px;
+    box-shadow: 0 0 80px rgba(255,255,255,0.06);
+}
 
-    .teams {
-        display: flex;
-        justify-content: space-between;
-        width: 900px;
-        text-align: center;
-        margin-bottom: 40px;
-    }
+/* Teams bar */
+.teams-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    .teams-local h6,
-    .teams-visitante h6 {
-        margin: 0;
-        font-size: 35px;
-        letter-spacing: 3px;
-        color: #ccc;
-        text-shadow: 0 0 10px #fff;
-    }
+/* Team block */
+.team-block {
+    width: 30%;
+    text-align: center;
+}
 
-    .teams-local #localScore,
-    .teams-visitante #visitScore {
-        font-size: 140px;
-        font-weight: bold;
-    }
+/* Logo wrap: contiene logo y botón que aparece al hover */
+.logo-wrap {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 8px;
+}
 
-    #localScore {
-        color: #ff2d2d;
-        text-shadow: 0 0 25px #ff0000;
-    }
+.team-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.02);
+    border: 2px solid rgba(255,255,255,0.03);
+}
 
-    #visitScore {
-        color: #1fa3ff;
-        text-shadow: 0 0 25px #0099ff;
-    }
+/* Botón de cambiar logo: oculto y aparece en hover */
+.change-logo-btn {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    display: none;
+    cursor: pointer;
+    backdrop-filter: blur(3px);
+}
+.logo-wrap:hover .change-logo-btn {
+    display: inline-block;
+}
 
-    .timer {
-        font-size: 170px;
-        font-weight: bold;
-        margin: 10px 0;
-        text-shadow: 0 0 30px yellow;
-        color: yellow;
-    }
+/* Hidden native file input */
+.hidden-file {
+    display: none;
+}
 
-    .period {
-        margin-top: 10px;
-        font-size: 55px;
-        letter-spacing: 4px;
-        text-shadow: 0 0 10px #fff;
-    }
+/* Names */
+.team-block h3 {
+    margin: 6px 0 6px;
+    font-size: 26px;
+    letter-spacing: 3px;
+    color: #ddd;
+}
 
-    .fouls {
-        display: flex;
-        justify-content: space-between;
-        width: 900px;
-        margin-top: 40px;
-        font-size: 45px;
-        font-weight: bold;
-    }
+/* Scores */
+.score {
+    font-size: 100px;
+    font-weight: 900;
+    margin-top: 6px;
+    text-shadow: 0 0 18px rgba(255,255,255,0.06);
+}
 
-    .fouls div {
-        padding: 15px 35px;
-        background: #222;
-        border-radius: 15px;
-        box-shadow: inset 0 0 15px #000, 0 0 15px #ffffff33;
-    }
+.red { color: #ff3c3c; text-shadow: 0 0 30px #ff2d2d; }
+.blue { color: #1fb6ff; text-shadow: 0 0 30px #0099ff; }
 
-    .hidden-controls { display: none; }
+/* Timer block */
+.timer-block {
+    width: 34%;
+    text-align: center;
+}
+
+.timer {
+    font-size: 120px;
+    font-weight: 900;
+    color: #ffd400;
+    text-shadow: 0 0 40px #ffd400;
+    line-height: 1;
+}
+
+.period {
+    margin-top: 6px;
+    font-size: 36px;
+    letter-spacing: 4px;
+}
+
+/* Posesión */
+.possession {
+    font-size: 50px;
+    margin-top: 8px;
+}
+#arrowLeft, #arrowRight {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    text-shadow: 0 0 12px white;
+}
+
+/* Fouls bar */
+.fouls-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.fouls-bar div {
+    padding: 10px 30px;
+    background: #141414;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.03);
+    box-shadow: inset 0 0 15px #000, 0 0 12px rgba(255,255,255,0.03);
+}
+
+/* Small screens fallback */
+@media (max-width: 900px) {
+    .score { font-size: 70px; }
+    .timer { font-size: 80px; }
+    .team-logo { width: 120px; height: 120px; }
+    .logo-wrap { width: 120px; height: 120px; }
+}

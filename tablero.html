@@ -1,45 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/tablero.css">
-    <title>Marcador Basquet Adaptado</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marcador Básquet Adaptado</title>
+  <link rel="stylesheet" href="CSS/tablero.css" />
 </head>
 <body>
-   <div class="scoreboard">
 
-    <div class="teams">
-        <div class="teams-local">
-            <h6>LOCAL</h6>
-            <div id="localScore">0</div>
-        </div>
-        
-        <div class="teams-visitante">
-            <h6>VISITANTE</h6>
-        <div id="visitScore">0</div>
-        </div>
+<div class="wrapper">
+
+  <!-- TEAMS BAR -->
+  <div class="teams-bar">
+
+    <!-- LOCAL -->
+    <div class="team-block">
+      <div class="logo-wrap">
+        <img id="logoLocal" src="IMG/local.png" alt="Logo Local" class="team-logo">
+        <button class="change-logo-btn" id="btnLocal" title="Cambiar logo local">⚙</button>
+        <input id="uploadLocal" type="file" accept="image/*" class="hidden-file">
+      </div>
+      <h3 id="nameLocal">LOCAL</h3>
+      <div id="localScore" class="score red">0</div>
     </div>
 
-    <div class="timer" id="timer">10:00</div>
-
-    <div class="period">PERIODO: <span id="period">1</span></div>
-
-    <div class="fouls">
-        <div>FALTAS L: <span id="localFouls">0</span></div>
-        <div>FALTAS V: <span id="visitFouls">0</span></div>
+    <!-- TIMER -->
+    <div class="timer-block">
+      <div id="timer" class="timer">10:00</div>
+      <div class="period">PERIODO <span id="period">1</span></div>
+      <div id="possession" class="possession">
+        <span id="arrowLeft">←</span>
+        <span id="arrowRight"></span>
+      </div>
     </div>
+
+    <!-- VISITANTE -->
+    <div class="team-block">
+      <div class="logo-wrap">
+        <img id="logoVisit" src="IMG/visitante.png" alt="Logo Visitante" class="team-logo">
+        <button class="change-logo-btn" id="btnVisit" title="Cambiar logo visitante">⚙</button>
+        <input id="uploadVisit" type="file" accept="image/*" class="hidden-file">
+      </div>
+      <h3 id="nameVisit">VISITANTE</h3>
+      <div id="visitScore" class="score blue">0</div>
+    </div>
+
+  </div>
+
+  <!-- FOULS BAR -->
+  <div class="fouls-bar">
+    <div>FALTAS L: <span id="localFouls">0</span></div>
+    <div>FALTAS V: <span id="visitFouls">0</span></div>
+  </div>
+
 </div>
 
-<!-- Controles invisibles -->
-<div class="hidden-controls">
-    <button id="startBtn"></button>
-    <button id="pauseBtn"></button>
-    <button id="resetClockBtn"></button>
-</div>
 
+<audio id="buzzer" preload="auto" src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQgAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"></audio>
 
 <script src="JS/tablero.js"></script>
-<audio id="buzzer" src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAESsAACJWAAACABAAZGF0YQgAAAAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"></audio>
 </body>
 </html>
